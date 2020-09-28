@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+      .extensionheader {
+        font-size: 24px;
+        font-weight: bold;
+        color: orange;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        white-space: nowrap
+      }
+      .boldedtext {
+        font-weight: bold;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: -10px;
+        white-space: nowrap;
+        overflow-x: auto;
+      }
+      .normaltext {
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: -10px;
+        white-space: nowrap;
+        overflow-x: auto;
+      }
+      .inlinetext {
+        display: inline-block;
+        margin-left: 20px;
+      }
+      .orange {
+        color: orange;
+      }
+      .white {
+        color: white;
+      }
+      /* The switch - the box around the slider */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 17px;
+      }
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      input:checked + .slider {
+        background-color: orange;
+      }
+      input:focus + .slider {
+        box-shadow: 0 0 1px orange;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(13px);
+        -ms-transform: translateX(13px);
+        transform: translateX(13px);
+      }
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 17px;
+      }
+      .slider.round:before {
+        border-radius: 50%;
+      }
+      label { display: inline-block; }
+      #id1 {display:inline-block; margin-right: -8px;}
+      #id2 {display:inline-block;}
+      #identity {text-align: center;}
+    </style>
+  </head>
+  <body>
+    <div id = title>
+      <p class = "extensionheader">Attackpoint Plus</p>
+    </div>
+    <div id = identity>
+      <p id = id1 class = "boldedtext orange"></p>
+      <p id = id2 class = "boldedtext white">www.attackpoint.org</p>
+    </div>
+    <!-- Rounded switch -->
+    <p class = "boldedtext orange" style = "margin-top:10px;">Settings</p>
+    <div id="compactmode" style = "text-align:center;">
+      <p class = "boldedtext white" style = "display:inline;">Compact Mode</p>
+      <label class="switch">
+        <input id = compact class = "option" type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
